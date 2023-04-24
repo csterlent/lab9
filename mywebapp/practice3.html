@@ -1,0 +1,44 @@
+<html>
+<head>
+<h1>EECS 348 Lab Seven</h1>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+Practice Three: JavaScript Password Verification<br>
+
+<input type="text" id="pwd1"><br>
+<input type="text" id="pwd2"><br>
+<button type="button">enter pwd</button>
+<img src='access.jpg'>
+</body>
+
+<script>
+	btn = document.querySelector('button');
+	pwd1 = document.getElementById('pwd1');
+	pwd2 = document.getElementById('pwd2');
+	img = document.querySelector('img');
+
+	pwd1.value = '';
+	pwd2.value = '';
+	img.style.display = 'none';
+
+	btn.onclick = () => {
+			if (pwd1.value.length < 8) {
+					alert('pwd must be at least 8 chars, try again');
+					pwd1.value = '';
+					pwd2.value = '';
+					return;
+				}
+			if (pwd1.value != pwd2.value) {
+					alert('pwds do not match, try again');
+					pwd1.value = '';
+					pwd2.value = '';
+					return;
+				}
+			pwd1.style.display = 'none';
+			pwd2.style.display = 'none';
+			btn.style.display = 'none';
+			img.style = '';
+		}
+</script>
+</html>

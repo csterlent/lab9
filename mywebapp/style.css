@@ -1,0 +1,36 @@
+<style>
+.fontcontrol {
+ border-width:30px;
+ border-style:solid;
+ border-color:#287EC7;
+}
+
+body {
+	display: block;
+	margin: 8px;
+	background-image: url("background.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+p {  border-width: 3px; border-style:solid; border-color:Black;
+     max-width: 400px; font-family: serif; background-color:White; }
+
+img {
+	width: 360;
+	height: 120;
+	border: 13;
+}
+
+table, th, td {
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+	width: 30;
+	height: 30;
+}
+
+</style>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<h1>EECS 348 Lab Seven</h1>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+Practice Two: CSS Font Control<br>
+<p>
+Create a web page that has a paragraph with some dummy text. Near the paragraph, have a
+text field to accept the following values: red/green/blue values for the paragraph and
+red/green/blue values for the border. You also need to control the width of the border.
+</p>
+
+border R<input type="text" id="br" value="0"><br>
+border G<input type="text" id="bg" value="0"><br>
+border B<input type="text" id="bb" value="0"><br>
+width<input type="text" id="w" value="3"><br>
+background R<input type="text" id="pr" value="255"><br>
+background G<input type="text" id="pg" value="255"><br>
+background B<input type="text" id="pb" value="255"><br>
+<button onclick="style()">altar</button>
+</body>
+
+<script>
+	const par = document.querySelector('p');
+	const br = document.getElementById('br');
+	const bg = document.getElementById('bg');
+	const bb = document.getElementById('bb');
+	const w  = document.getElementById('w');
+	const pr = document.getElementById('pr');
+	const pg = document.getElementById('pg');
+	const pb = document.getElementById('pb');
+	
+	document.querySelector('button').onclick = () => {
+			par.style.borderColor = `rgb(${br.value}, ${bg.value}, ${bb.value})`;
+			par.style.backgroundColor = `rgb(${pr.value}, ${pg.value}, ${pb.value})`;
+			par.style.borderWidth = w.value;
+		}
+</script>
+</html>
